@@ -1,0 +1,31 @@
+---
+title: "assingment"
+author: "Zine Eddine"
+date: '2022-07-20'
+output: slidy_presentation
+---
+# My Presentation.
+
+```{r, echo=FALSE}
+now.date <- date()
+```
+
+`r now.date`
+
+# Plot using Plotly
+
+```{r, message=FALSE, echo=FALSE}
+library(ggplot2)
+library(plotly)
+```
+
+
+```{r, echo=FALSE}
+data("mtcars")
+g <- ggplot(mpg, aes(displ, hwy))
+g <- g + geom_point(aes(colour = drv))
+
+ggplotly(g)
+```
+
+# Thank you for reading.
